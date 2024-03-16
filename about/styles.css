@@ -1,0 +1,10 @@
+.zoomable {
+  max-width: 60%;
+  height: auto;
+  cursor: pointer;
+  transition: height 0.3s ease; /* 添加过渡效果 */
+}
+
+.zoomed {
+  height: 100% !important; /* 通过!important确保高度优先级高于其他样式 */
+}
