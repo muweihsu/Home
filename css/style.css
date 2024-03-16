@@ -510,7 +510,7 @@ body {
 .content a {
   color: #c9cacc;
   text-decoration: none;
-  background-image: linear-gradient(transparent, transparent 5px, #c9cacc 5px, #c9cacc);
+  background-image: linear-gradient(transparent, transparent 5px, #c9cacc 5px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -542,7 +542,7 @@ body {
 .content h4 a:hover,
 .content h5 a:hover,
 .content h6 a:hover {
-  background-image: linear-gradient(transparent, transparent 6px, #d480aa 6px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 6px, #d480aa 6px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -553,7 +553,7 @@ body {
   text-decoration: none;
 }
 .content h6 a:hover {
-  background-image: linear-gradient(transparent, transparent 6px, #d480aa 6px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 6px, #d480aa 6px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -641,7 +641,7 @@ body {
   color: #2bbc8a;
 }
 #header #nav ul a:hover {
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -789,7 +789,7 @@ body {
   color: #2bbc8a;
 }
 #header-post #nav ul a:hover {
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -951,7 +951,7 @@ body {
   font-size: 1em;
 }
 #footer-post #nav-footer a:hover {
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -1206,7 +1206,7 @@ article .content .caption {
   line-height: 1.25;
 }
 .article-tag .tag-link {
-  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -1215,7 +1215,7 @@ article .content .caption {
   content: "#";
 }
 .article-category .category-link {
-  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -1621,7 +1621,7 @@ code {
   color: #908d8d;
   font-style: italic;
   font-size: 0.8em;
-  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, transparent);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
