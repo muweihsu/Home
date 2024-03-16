@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   images.forEach(function(img) {
     img.onclick = function() {
-      img.classList.toggle("zoomed"); // ��?zoomed?���s�b
+      img.classList.toggle("zoomed");
     };
   });
 });
