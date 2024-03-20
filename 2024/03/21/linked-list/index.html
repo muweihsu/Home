@@ -14,7 +14,7 @@
 <meta property="og:description" content="Linked listA linked list is a data structure where elements, called nodes, are connected in a linear sequence. Each node contains data and a reference to the next node. This structure allows for dynam">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-20T16:14:58.000Z">
-<meta property="article:modified_time" content="2024-03-20T17:50:09.241Z">
+<meta property="article:modified_time" content="2024-03-20T17:53:09.245Z">
 <meta property="article:author" content="Momo">
 <meta property="article:tag" content="data structure">
 <meta property="article:tag" content="linked list">
@@ -120,7 +120,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linked-list"><span class="toc-number">1.</span> <span class="toc-text">Linked list</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-implement-a-linked-list"><span class="toc-number">1.1.</span> <span class="toc-text">How to implement a linked list</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implement-a-linked-list-in-C"><span class="toc-number">1.2.</span> <span class="toc-text">Implement a linked list in C++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#output"><span class="toc-number">1.2.1.</span> <span class="toc-text">output</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linked-list"><span class="toc-number">1.</span> <span class="toc-text">Linked list</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-implement-a-linked-list"><span class="toc-number">2.</span> <span class="toc-text">How to implement a linked list</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Implement-a-linked-list-in-C"><span class="toc-number">3.</span> <span class="toc-text">Implement a linked list in C++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#output"><span class="toc-number">3.0.1.</span> <span class="toc-text">output</span></a></li></ol></li></ol></li></ol>
       </div>
     
   </span>
@@ -180,7 +180,7 @@
 <li>The arrow from one node to another signifies the connection between nodes.</li>
 <li>The last node points to <strong>NULL</strong>, indicating the end of the list.</li>
 </ul>
-<h2 id="How-to-implement-a-linked-list"><a href="#How-to-implement-a-linked-list" class="headerlink" title="How to implement a linked list"></a>How to implement a linked list</h2><ol>
+<h1 id="How-to-implement-a-linked-list"><a href="#How-to-implement-a-linked-list" class="headerlink" title="How to implement a linked list"></a>How to implement a linked list</h1><ol>
 <li>Define a <strong>Node</strong> structure</li>
 <li>Initialize the <strong>Head</strong> pointer (NULL)</li>
 <li>Implement insertion<ol>
@@ -211,7 +211,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="Implement-a-linked-list-in-C"><a href="#Implement-a-linked-list-in-C" class="headerlink" title="Implement a linked list in C++"></a>Implement a linked list in C++</h2><ol>
+<h1 id="Implement-a-linked-list-in-C"><a href="#Implement-a-linked-list-in-C" class="headerlink" title="Implement a linked list in C++"></a>Implement a linked list in C++</h1><ol>
 <li>Define a <strong>Node</strong> structure <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span>&#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    Node* next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>Initialize the <strong>Head</strong> pointer (NULL)<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//in main</span></span><br><span class="line">node *head;</span><br><span class="line">head.next = <span class="literal">nullptr</span>; <span class="comment">//nullptr = NULL</span></span><br></pre></td></tr></table></figure></li>
 <li>Implement insertion <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> data;</span><br><span class="line">cin &gt;&gt; data;</span><br></pre></td></tr></table></figure>
@@ -269,7 +269,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linked-list"><span class="toc-number">1.</span> <span class="toc-text">Linked list</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-implement-a-linked-list"><span class="toc-number">1.1.</span> <span class="toc-text">How to implement a linked list</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implement-a-linked-list-in-C"><span class="toc-number">1.2.</span> <span class="toc-text">Implement a linked list in C++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#output"><span class="toc-number">1.2.1.</span> <span class="toc-text">output</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linked-list"><span class="toc-number">1.</span> <span class="toc-text">Linked list</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-implement-a-linked-list"><span class="toc-number">2.</span> <span class="toc-text">How to implement a linked list</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Implement-a-linked-list-in-C"><span class="toc-number">3.</span> <span class="toc-text">Implement a linked list in C++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#output"><span class="toc-number">3.0.1.</span> <span class="toc-text">output</span></a></li></ol></li></ol></li></ol>
       </div>
     
 
