@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Linked listA linked list is a data structure where elements, called nodes, are connected in a linear sequence. Each node contains data and a reference to the next node. This structure allows for dynam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linked list">
+<meta property="og:url" content="http://muweihsu.github.io/2024/03/21/linked-list/index.html">
+<meta property="og:site_name" content="Momo&#39;s site">
+<meta property="og:description" content="Linked listA linked list is a data structure where elements, called nodes, are connected in a linear sequence. Each node contains data and a reference to the next node. This structure allows for dynam">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-20T16:14:58.000Z">
+<meta property="article:modified_time" content="2024-03-20T17:50:09.241Z">
+<meta property="article:author" content="Momo">
+<meta property="article:tag" content="data structure">
+<meta property="article:tag" content="linked list">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>linked list</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/tags/">tags</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/muweihsu/muweihsu.github.io">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2024/03/11/Basic-C/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://muweihsu.github.io/2024/03/21/linked-list/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://muweihsu.github.io/2024/03/21/linked-list/&text=linked list"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://muweihsu.github.io/2024/03/21/linked-list/&is_video=false&description=linked list"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=linked list&body=Check out this article: http://muweihsu.github.io/2024/03/21/linked-list/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://muweihsu.github.io/2024/03/21/linked-list/&name=linked list&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://muweihsu.github.io/2024/03/21/linked-list/&t=linked list"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linked-list"><span class="toc-number">1.</span> <span class="toc-text">Linked list</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-implement-a-linked-list"><span class="toc-number">1.1.</span> <span class="toc-text">How to implement a linked list</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implement-a-linked-list-in-C"><span class="toc-number">1.2.</span> <span class="toc-text">Implement a linked list in C++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#output"><span class="toc-number">1.2.1.</span> <span class="toc-text">output</span></a></li></ol></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        linked list
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Momo</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-03-20T16:14:58.000Z" class="dt-published" itemprop="datePublished">2024-03-21</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Data-structure/">Data structure</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/data-structure/" rel="tag">data structure</a>, <a class="p-category" href="/tags/linked-list/" rel="tag">linked list</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="Linked-list"><a href="#Linked-list" class="headerlink" title="Linked list"></a>Linked list</h1><p>A linked list is a data structure where elements, called <strong>nodes</strong>, are connected in a linear sequence. Each node contains data and a reference to the next node. This structure allows for dynamic memory allocation and efficient insertion and deletion operations.</p>
+<pre><code>Head -&gt; [Node1] -&gt; [Node2] -&gt; [Node3] -&gt; ... -&gt; [NodeN] -&gt; Null
+</code></pre>
+<ul>
+<li><strong>“Head”</strong> points to the first node in the list.</li>
+<li>Each box represents a <strong>node</strong>.</li>
+<li>Inside each box, there is <strong>data</strong> and an arrow pointing to the next node in the sequence.</li>
+<li>The arrow from one node to another signifies the connection between nodes.</li>
+<li>The last node points to <strong>NULL</strong>, indicating the end of the list.</li>
+</ul>
+<h2 id="How-to-implement-a-linked-list"><a href="#How-to-implement-a-linked-list" class="headerlink" title="How to implement a linked list"></a>How to implement a linked list</h2><ol>
+<li>Define a <strong>Node</strong> structure</li>
+<li>Initialize the <strong>Head</strong> pointer (NULL)</li>
+<li>Implement insertion<ol>
+<li>Create a New Node</li>
+<li>Update the data</li>
+<li>If the list is empty: <ol>
+<li>Update the head pointer to point to the new node.</li>
+<li>Set the “next” pointer of the new node to point to “NULL”</li>
+</ol>
+</li>
+<li>Insertion at the Front<ol>
+<li>Adjust Pointers <ol>
+<li>Set the “next” pointer of the new node to point to the current head of the list.</li>
+<li>Update the head pointer to point to the new node.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Insertion at the Back<ol>
+<li>Traverse to the End of the List (last_node)</li>
+<li>Adjust Pointers<ol>
+<li>Set the “next” pointer of the last node to point to the new node, making it the new last node.</li>
+<li>Set the “next” pointer of the new node to NULL.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="Implement-a-linked-list-in-C"><a href="#Implement-a-linked-list-in-C" class="headerlink" title="Implement a linked list in C++"></a>Implement a linked list in C++</h2><ol>
+<li>Define a <strong>Node</strong> structure <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span>&#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    Node* next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Initialize the <strong>Head</strong> pointer (NULL)<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//in main</span></span><br><span class="line">node *head;</span><br><span class="line">head.next = <span class="literal">nullptr</span>; <span class="comment">//nullptr = NULL</span></span><br></pre></td></tr></table></figure></li>
+<li>Implement insertion <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> data;</span><br><span class="line">cin &gt;&gt; data;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Create a New Node   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node* newNode = <span class="keyword">new</span> Node;</span><br></pre></td></tr></table></figure></li>
+<li>Update the data  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newNode-&gt;data = data;</span><br></pre></td></tr></table></figure></li>
+<li>If the list is empty:   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(head-&gt;next == <span class="literal">nullptr</span>)&#123;</span><br><span class="line">    head-&gt;next = newNode;</span><br><span class="line">    newNode-&gt;next = <span class="literal">nullptr</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Insertion at the Front<ol>
+<li>Adjust Pointers    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">newNode-&gt;next = head-&gt;next; </span><br><span class="line"></span><br><span class="line">head-&gt;next = newNode;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>Insertion at the Back<ol>
+<li>Traverse to the End of the List (last_node)   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node* last_node = head-&gt;next;</span><br><span class="line"><span class="keyword">while</span>(last_node-&gt;next != <span class="literal">nullptr</span>)</span><br><span class="line">    last_node = last_node-&gt;next;</span><br></pre></td></tr></table></figure></li>
+<li>Adjust Pointers   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">last_node-&gt;next = newNode;</span><br><span class="line">newNode-&gt;next = <span class="literal">nullptr</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<details open>
+  <summary style="font-size: 20px;">linked list in C++ with functions to insert nodes at the front and back of the list</summary>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Define the Node structure</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    Node* next;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Constructor</span></span><br><span class="line">    <span class="built_in">Node</span>(<span class="type">int</span> val) : <span class="built_in">data</span>(val), <span class="built_in">next</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Define the LinkedList class</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkedList</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Node* head;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// Constructor</span></span><br><span class="line">    <span class="built_in">LinkedList</span>() : <span class="built_in">head</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Function to insert a node at the front of the list</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertFront</span><span class="params">(<span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Create a new node</span></span><br><span class="line">        Node* newNode = <span class="keyword">new</span> <span class="built_in">Node</span>(val);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Make the new node point to the current head</span></span><br><span class="line">        newNode-&gt;next = head;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Update the head to point to the new node</span></span><br><span class="line">        head = newNode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Function to insert a node at the back of the list</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insertBack</span><span class="params">(<span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Create a new node</span></span><br><span class="line">        Node* newNode = <span class="keyword">new</span> <span class="built_in">Node</span>(val);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// If the list is empty, make the new node the head</span></span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            head = newNode;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Traverse to the end of the list</span></span><br><span class="line">        Node* current = head;</span><br><span class="line">        <span class="keyword">while</span> (current-&gt;next != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            current = current-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Make the last node point to the new node</span></span><br><span class="line">        current-&gt;next = newNode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Function to delete a node from the front of the list</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">deleteFront</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Check if the list is empty</span></span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            std::cout &lt;&lt; <span class="string">&quot;List is empty. Cannot delete from an empty list.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Store a pointer to the current head</span></span><br><span class="line">        Node* temp = head;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Update the head to point to the next node</span></span><br><span class="line">        head = head-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Delete the original head node</span></span><br><span class="line">        <span class="keyword">delete</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Function to delete a node from the back of the list</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">deleteBack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Check if the list is empty</span></span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            std::cout &lt;&lt; <span class="string">&quot;List is empty. Cannot delete from an empty list.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// If the list has only one node, delete it</span></span><br><span class="line">        <span class="keyword">if</span> (head-&gt;next == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">delete</span> head;</span><br><span class="line">            head = <span class="literal">nullptr</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Traverse to the second-to-last node</span></span><br><span class="line">        Node* current = head;</span><br><span class="line">        <span class="keyword">while</span> (current-&gt;next-&gt;next != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            current = current-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Delete the last node</span></span><br><span class="line">        <span class="keyword">delete</span> current-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Set the next pointer of the second-to-last node to null</span></span><br><span class="line">        current-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Function to display the linked list</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Node* current = head;</span><br><span class="line">        <span class="keyword">while</span> (current != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            std::cout &lt;&lt; current-&gt;data &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">            current = current-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        std::cout &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Create a LinkedList object</span></span><br><span class="line">    LinkedList list;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Test</span></span><br><span class="line">    list.<span class="built_in">insertFront</span>(<span class="number">3</span>);</span><br><span class="line">    list.<span class="built_in">insertFront</span>(<span class="number">2</span>);</span><br><span class="line">    list.<span class="built_in">insertFront</span>(<span class="number">1</span>);</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;List after inserting at the front: &quot;</span>;</span><br><span class="line">    list.<span class="built_in">display</span>();</span><br><span class="line"></span><br><span class="line">    list.<span class="built_in">deleteFront</span>();</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;List after deleting from the front: &quot;</span>;</span><br><span class="line">    list.<span class="built_in">display</span>();</span><br><span class="line"></span><br><span class="line">    list.<span class="built_in">insertBack</span>(<span class="number">4</span>);</span><br><span class="line">    list.<span class="built_in">insertBack</span>(<span class="number">5</span>);</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;List after inserting at the back: &quot;</span>;</span><br><span class="line">    list.<span class="built_in">display</span>();</span><br><span class="line">    </span><br><span class="line">    list.<span class="built_in">deleteBack</span>();</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;List after deleting from the back: &quot;</span>;</span><br><span class="line">    list.<span class="built_in">display</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="output"><a href="#output" class="headerlink" title="output"></a>output</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List after inserting at the front: 1 2 3 </span><br><span class="line">List after deleting from the front: 2 3</span><br><span class="line">List after inserting at the back: 2 3 4 5</span><br><span class="line">List after deleting from the back: 2 3 4</span><br></pre></td></tr></table></figure>
+</details>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Category</a></li>
+        
+          <li><a href="/tags/">tags</a></li>
+        
+          <li><a href="/search/">Search</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/muweihsu/muweihsu.github.io">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linked-list"><span class="toc-number">1.</span> <span class="toc-text">Linked list</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-implement-a-linked-list"><span class="toc-number">1.1.</span> <span class="toc-text">How to implement a linked list</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implement-a-linked-list-in-C"><span class="toc-number">1.2.</span> <span class="toc-text">Implement a linked list in C++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#output"><span class="toc-number">1.2.1.</span> <span class="toc-text">output</span></a></li></ol></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://muweihsu.github.io/2024/03/21/linked-list/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://muweihsu.github.io/2024/03/21/linked-list/&text=linked list"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://muweihsu.github.io/2024/03/21/linked-list/&is_video=false&description=linked list"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=linked list&body=Check out this article: http://muweihsu.github.io/2024/03/21/linked-list/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://muweihsu.github.io/2024/03/21/linked-list/&title=linked list"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://muweihsu.github.io/2024/03/21/linked-list/&name=linked list&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://muweihsu.github.io/2024/03/21/linked-list/&t=linked list"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    Momo
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/tags/">tags</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/muweihsu/muweihsu.github.io">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
