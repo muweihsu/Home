@@ -14,7 +14,7 @@
 <meta property="og:description" content="Linked listA linked list is a data structure where elements, called nodes, are connected in a linear sequence. Each node contains data and a reference to the next node. This structure allows for dynam">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-20T16:14:58.000Z">
-<meta property="article:modified_time" content="2024-03-20T17:53:09.245Z">
+<meta property="article:modified_time" content="2024-03-20T17:56:14.917Z">
 <meta property="article:author" content="Momo">
 <meta property="article:tag" content="data structure">
 <meta property="article:tag" content="linked list">
@@ -171,8 +171,7 @@
 
   <div class="content e-content" itemprop="articleBody">
     <h1 id="Linked-list"><a href="#Linked-list" class="headerlink" title="Linked list"></a>Linked list</h1><p>A linked list is a data structure where elements, called <strong>nodes</strong>, are connected in a linear sequence. Each node contains data and a reference to the next node. This structure allows for dynamic memory allocation and efficient insertion and deletion operations.</p>
-<pre><code>Head -&gt; [Node1] -&gt; [Node2] -&gt; [Node3] -&gt; ... -&gt; [NodeN] -&gt; Null
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Head -&gt; [Node1] -&gt; [Node2] -&gt; [Node3] -&gt; ... -&gt; [NodeN] -&gt; Null</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>“Head”</strong> points to the first node in the list.</li>
 <li>Each box represents a <strong>node</strong>.</li>
@@ -182,7 +181,7 @@
 </ul>
 <h1 id="How-to-implement-a-linked-list"><a href="#How-to-implement-a-linked-list" class="headerlink" title="How to implement a linked list"></a>How to implement a linked list</h1><ol>
 <li>Define a <strong>Node</strong> structure</li>
-<li>Initialize the <strong>Head</strong> pointer (NULL)</li>
+<li>Initialize the <strong>Head</strong> pointer</li>
 <li>Implement insertion<ol>
 <li>Create a New Node</li>
 <li>Update the data</li>
@@ -218,7 +217,7 @@
 <ol>
 <li>Create a New Node   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node* newNode = <span class="keyword">new</span> Node;</span><br></pre></td></tr></table></figure></li>
 <li>Update the data  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newNode-&gt;data = data;</span><br></pre></td></tr></table></figure></li>
-<li>If the list is empty:   <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(head-&gt;next == <span class="literal">nullptr</span>)&#123;</span><br><span class="line">    head-&gt;next = newNode;</span><br><span class="line">    newNode-&gt;next = <span class="literal">nullptr</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>If the list is empty  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(head-&gt;next == <span class="literal">nullptr</span>)&#123;</span><br><span class="line">    head-&gt;next = newNode;</span><br><span class="line">    newNode-&gt;next = <span class="literal">nullptr</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>Insertion at the Front<ol>
 <li>Adjust Pointers    <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">newNode-&gt;next = head-&gt;next; </span><br><span class="line"></span><br><span class="line">head-&gt;next = newNode;</span><br></pre></td></tr></table></figure></li>
 </ol>
