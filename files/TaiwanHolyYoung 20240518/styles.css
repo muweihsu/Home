@@ -10,17 +10,25 @@
 }
 
 body {
-  font-size: 24px; /* ?�m��??�����r�^�j�p */
+  font-size: 18px;
 }
-
 p {
-  font-size: 1em; /* ?�m�q�����r�^�j�p */
+  font-size: 1em;
 }
-
 h1 {
-  font-size: 24px; /* ?�m�@???���r�^�j�p */
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+.content h2 {
+  font-size: 24px !important;
 }
 
-h2 {
-  font-size: 20px; /* ?�m�G???���r�^�j�p */
+.content h3 {
+  font-size: 20px !important;
+}
+
+.content h2:before {
+  content: "" !important;
 }
