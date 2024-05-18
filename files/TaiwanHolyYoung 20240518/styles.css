@@ -4,11 +4,9 @@
   cursor: pointer;
   transition: height 0.3s ease;
 }
-
 .zoomable.zoomed {
   width: 150% !important;
 }
-
 body {
   font-size: 18px;
 }
@@ -24,11 +22,9 @@ h2 {
 .content h2 {
   font-size: 24px !important;
 }
-
 .content h3 {
   font-size: 20px !important;
 }
-
 .content h2:before {
   content: "" !important;
 }
