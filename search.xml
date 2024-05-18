@@ -8,20 +8,7 @@
       <link href="/2024/05/18/test/"/>
       <url>/2024/05/18/test/</url>
       
-        <content type="html"><![CDATA[<h2 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h2><h3 id="1-Find-GET-Method"><a href="#1-Find-GET-Method" class="headerlink" title="1. Find GET Method"></a>1. Find GET Method</h3><p>�q�L�}�o�̤u��d��Network����Header<br><img src="/./file/TaiwanHolyYoung%2020240518/WEB/1.%20Find%20GET%20Method%20.png"></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2024/05/18/file/image_toggle/"/>
-      <url>/2024/05/18/file/image_toggle/</url>
-      
-        <content type="html"><![CDATA[document.addEventListener("DOMContentLoaded", function() {  var images = document.querySelectorAll(".zoomable");  images.forEach(function(img) {    img.onclick = function() {      img.classList.toggle("zoomed");    };  });});]]></content>
+        <content type="html"><![CDATA[<h2 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h2><h3 id="1-Find-GET-Method"><a href="#1-Find-GET-Method" class="headerlink" title="1. Find GET Method"></a>1. Find GET Method</h3><p>通過開發者工具查看Network中的Header<br><img src="/./file/TaiwanHolyYoung%2020240518/WEB/1.%20Find%20GET%20Method%20.png"></p>]]></content>
       
       
       
@@ -64,19 +51,6 @@
             <tag> linked list </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2024/03/17/file/styles/"/>
-      <url>/2024/03/17/file/styles/</url>
-      
-        <content type="html"><![CDATA[.zoomable {  max-width: 100%;  width: 60%;  cursor: pointer;  transition: height 0.3s ease;}.zoomable.zoomed {  width: 100% !important;}]]></content>
-      
-      
       
     </entry>
     
