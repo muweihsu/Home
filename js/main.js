@@ -56,21 +56,22 @@ $(document).ready(function() {
      */
     if (menu.length) {
       $(window).on("scroll", function() {
-        var topDistance = menu.offset().top;
+        var topDistance = document.documentElement.scrollTop;
 
         // hide only the navigation links on desktop
-        if (!nav.is(":visible") && topDistance < 50) {
+        const distanceLimit = 50;
+        if (!nav.is(":visible") && topDistance < distanceLimit) {
           nav.show();
-        } else if (nav.is(":visible") && topDistance > 100) {
+        } else if (nav.is(":visible") && topDistance >= distanceLimit) {
           nav.hide();
         }
 
         // on tablet, hide the navigation icon as well and show a "scroll to top
         // icon" instead
-        if ( ! $( "#menu-icon" ).is(":visible") && topDistance < 50 ) {
+        if ( ! $( "#menu-icon" ).is(":visible") && topDistance < distanceLimit ) {
           $("#menu-icon-tablet").show();
           $("#top-icon-tablet").hide();
-        } else if (! $( "#menu-icon" ).is(":visible") && topDistance > 100) {
+        } else if (! $( "#menu-icon" ).is(":visible") && topDistance > distanceLimit) {
           $("#menu-icon-tablet").hide();
           $("#top-icon-tablet").show();
         }
