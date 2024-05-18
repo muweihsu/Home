@@ -1,0 +1,10 @@
+.zoomable {
+  max-width: 100%;
+  width: 80%;
+  cursor: pointer;
+  transition: height 0.3s ease;
+}
+
+.zoomable.zoomed {
+  width: 150% !important;
+}
