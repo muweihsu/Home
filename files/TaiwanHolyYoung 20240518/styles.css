@@ -8,3 +8,19 @@
 .zoomable.zoomed {
   width: 150% !important;
 }
+
+body {
+  font-size: 16px; /* ?�m��??�����r�^�j�p */
+}
+
+p {
+  font-size: 1em; /* ?�m�q�����r�^�j�p */
+}
+
+h1 {
+  font-size: 24px; /* ?�m�@???���r�^�j�p */
+}
+
+h2 {
+  font-size: 20px; /* ?�m�G???���r�^�j�p */
+}
