@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2024/05/18/image_toggle/"/>
+      <url>/2024/05/18/image_toggle/</url>
+      
+        <content type="html"><![CDATA[document.addEventListener("DOMContentLoaded", function() {  var images = document.querySelectorAll(".zoomable");  images.forEach(function(img) {    img.onclick = function() {      img.classList.toggle("zoomed");    };  });});]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>TaiwanHolyYoung 20240518</title>
       <link href="/2024/05/18/TaiwanHolyYoung-20240518%20old/"/>
       <url>/2024/05/18/TaiwanHolyYoung-20240518%20old/</url>
